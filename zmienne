@@ -1,0 +1,16 @@
+def get_result_text(result, jezyk='pl'):
+    if jezyk == 'pl':
+        return 'Prawda' if result else 'Falsz'
+    else:
+        return 'True' if result else 'False'
+
+def main():
+    a = input("Podaj pierwsze slowo: ")
+    b = input("Podaj drugie slowo: ")
+    jezyk = input("Podaj jezyk (pl/en): ")
+
+    print("1: ", get_result_text(a and b, jezyk))
+    print("2: ", get_result_text(a or b, jezyk))
+   
+if __name__ == '__main__':
+    main()
